@@ -1,14 +1,17 @@
 const myLibrary = [];
 
-function Book() {
+function Book(title, author, pages, read) {
     this.title = title
     this.author = author
     this.pages = pages
-    this.isRead = isRead
+    this.read = read
 }
 
 function addBookToLibrary() {
-    // do stuff here
+    let title = document.querySelector('#title').value;
+    let author = document.querySelector('#author').value;
+    let pages = document.querySelector('#pages').value;
+    let read = document.querySelector('#read').checked
 }
 
 const addBookBtn = document.querySelector('#add-book');
