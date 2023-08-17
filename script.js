@@ -1,5 +1,7 @@
 const myLibrary = [];
 
+
+// allows book entries to have custom inputs
 function Book(title, author, pages, read) {
     this.title = title
     this.author = author
@@ -7,12 +9,14 @@ function Book(title, author, pages, read) {
     this.read = read
 }
 
+// stores books that are added
 function render() {
     let libraryBook = document.querySelector('#library');
     libraryBook.innerHTML = '';
     for (let i = 0; i < myLibrary.length; i++) {
         let book = myLibrary[i];
         let bookEl = document.createElement('div');
+        bookEl.classList.add('lib-card');
         bookEl.innerHTML = `
             <div class = 'lib-header'>
                 <h2 class='title'>${book.title}</h2>
@@ -30,7 +34,7 @@ function render() {
     }
 }
 
-
+// adds the books to the library
 function addBookToLibrary() {
     let title = document.querySelector('#title').value;
     let author = document.getElementById('author').value;
@@ -41,28 +45,30 @@ function addBookToLibrary() {
     render();
 }
 
+// button that registers an entry
 const addBookBtn = document.querySelector('#add-book');
-
 addBookBtn.addEventListener('click', function() {
     let addBookForm = document.querySelector('#add-book-form');
      addBookForm.style.display = 'block';
 
 })
 
+// adds book to the library
 document.querySelector('#add-book-form').addEventListener('submit', function(event) {
     event.preventDefault();
     addBookToLibrary();
 })
 
+// removes book from library
 function removeBook(index) {
     myLibrary.splice(index, 1);
     render();
 }
 
+// helps control the 'read' status
 Book.prototype.toggleRead = function() {
     this.read = !this.read;
 }
-
 function toggleRead(index) {
     myLibrary[index].toggleRead();
     render();
