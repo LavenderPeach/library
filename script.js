@@ -17,6 +17,9 @@ function render() {
         let book = myLibrary[i];
         let bookEl = document.createElement('div');
         bookEl.classList.add('lib-card');
+        if (book.read) {
+            bookEl.classList.add('read');
+        }
         bookEl.innerHTML = `
             <div class = 'lib-header'>
                 <h2 class='title'>${book.title}</h2>
