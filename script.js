@@ -22,6 +22,7 @@ function render() {
                 <p>${book.pages} pages</p>
                 <p class='read-status'>${book.read ? 'Read' : 'Not Read'}</p>
                 <button class='remove-btn' onclick='removeBook(${i})'>Remove</button>
+                <button class='toggle-read-btn' onclick='toggleRead(${i})'>Toggle Read</button>
             </div>
         `;
 
@@ -55,5 +56,14 @@ document.querySelector('#add-book-form').addEventListener('submit', function(eve
 
 function removeBook(index) {
     myLibrary.splice(index, 1);
+    render();
+}
+
+Book.prototype.toggleRead = function() {
+    this.read = !this.read;
+}
+
+function toggleRead(index) {
+    myLibrary[index].toggleRead();
     render();
 }
