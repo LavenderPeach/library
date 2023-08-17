@@ -21,6 +21,7 @@ function render() {
             <div class = 'lib-body'>
                 <p>${book.pages} pages</p>
                 <p class='read-status'>${book.read ? 'Read' : 'Not Read'}</p>
+                <button class='remove-btn' onclick='removeBook(${i})'>Remove</button>
             </div>
         `;
 
@@ -51,3 +52,8 @@ document.querySelector('#add-book-form').addEventListener('submit', function(eve
     event.preventDefault();
     addBookToLibrary();
 })
+
+function removeBook(index) {
+    myLibrary.splice(index, 1);
+    render();
+}
