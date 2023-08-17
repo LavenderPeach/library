@@ -1,11 +1,33 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body{
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+}
+
 #add-book {
     display: block;
-    margin: 0 auto;
-    padding: 15px;
     font-size: 16px;
-    background-color: forestgreen;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 7px;
+    padding: 10px 15px;
+    margin: 15px;
     cursor: pointer;
+}
+
+#add-book-form {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
 }
