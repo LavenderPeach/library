@@ -47,3 +47,33 @@ input[type='submit'] {
 input[type='checkbox'] {
     margin-top: 5px;
 }
+
+.lib-card {
+    background-color: white;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.author {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.pages {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.read-status {
+    font-size: 16px;
+    color: #007bff;
+    margin-top: 10px;
+}
