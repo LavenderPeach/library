@@ -77,3 +77,19 @@ input[type='checkbox'] {
     color: #007bff;
     margin-top: 10px;
 }
+
+.remove-btn, 
+.toggle-read-btn {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-read-btn {
+    background-color: #007bff;
+    margin-left: 5px;
+}
